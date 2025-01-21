@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница</title>
+    <style>
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        h3 {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+</nav>
+    <h1>{% block pagename %}Главная страница{% endblock %}</h1>
+    <nav>
+        <ul>
+            {% block menu %}
+            <li><a href="/"><h3>Главная</h3></a></li>
+            <li><a href="/games"><h3>Игры</h3></a></li>
+            <li><a href="/cart"><h3>Корзина</h3></a></li>
+            {% endblock %}
+        </ul>
+
+    <div>
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>
